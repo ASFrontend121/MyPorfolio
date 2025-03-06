@@ -69,6 +69,10 @@
     cursor: pointer;
 }
 
+.code {
+    color: var(--brand-1);
+}
+
 /*========== Переменные ==========*/ /*========== Variables ==========*/
 
 :root {
@@ -118,10 +122,6 @@
     to {
         transform: translateX(0);
     }
-}
-
-.logo span {
-    color: var(--brand-1);
 }
 
 .nav__list {
@@ -255,6 +255,7 @@
 .hero__content {
     display: flex;
     justify-content: space-between;
+    gap: 128px;
     padding: 0 128px;
 }
 
@@ -311,6 +312,7 @@
 
 .info__item {
     display: flex;
+    align-items: center;
     gap: 16px;
     font-family: var(--second-family);
     font-weight: 400;
@@ -335,6 +337,7 @@
 }
 
 .profile__cv {
+    position: relative;
     border-radius: 32px;
     padding: 16px 32px;
     background: var(--white);
@@ -344,4 +347,81 @@
     text-transform: capitalize;
     color: var(--bg-1);
     text-decoration: none;
+}
+
+.profile__cv::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 32px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/icon-download.svg);
+    background-repeat: no-repeat;
+}
+
+.hero__content-right {
+    max-width: 745px;
+}
+
+.hero__intro {
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 112%;
+    text-transform: capitalize;
+    color: var(--white);
+}
+
+.hero__intro .code {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    text-transform: none;
+    color: var(--brand-2);
+}
+
+.name {
+    color: var(--brand-1);
+}
+
+.hero__intro-subtitle {
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--white);
+}
+
+.hero__intro-mail {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.talk {
+    display: block;
+    margin-left: 24px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 131%;
+    text-transform: capitalize;
+    color: var(--brand-1);
+}
+
+.hero__message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    background: var(--grey);
+    border: none;
+    cursor: pointer;
 }
